@@ -1,0 +1,310 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+
+  background: #0d1323;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 1.5rem;
+  margin: 50px auto;
+  padding: 0 3rem;
+
+  width: 100%;
+  max-width: 1280px;
+  height: auto;
+}
+
+/* ========================================================================== */
+/*                                    .INFO                                   */
+/* ========================================================================== */
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #1d204b;
+}
+
+// .info-name
+.info-name {
+  width: 100%;
+  height: 70%;
+  background: #5746ea;
+  padding: 2rem;
+  color: white;
+  border-radius: 10px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  //   1.img
+  img {
+    width: 70px;
+    height: 70px;
+    border-radius: 100rem;
+    border: 3px solid white;
+  }
+
+  // 2.name
+  .name {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+
+    span {
+      padding-top: 2rem;
+      font-size: 0.8rem;
+      opacity: 0.7;
+    }
+
+    strong {
+      font-size: 2.2rem;
+      font-weight: 300;
+    }
+  }
+}
+
+// .info-date
+.info-date {
+  width: 100%;
+  padding: 2rem;
+  background: #1d204b;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+
+  position: relative;
+
+  label {
+    color: #7f82d6;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+      color: white;
+    }
+  }
+
+  input {
+    position: absolute;
+    visibility: hidden;
+
+    &:checked + label {
+      color: white;
+    }
+  }
+}
+
+/* ========================================================================== */
+/*                                    TIME                                    */
+/* ========================================================================== */
+.time {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  height: auto;
+}
+
+.time-block {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  height: auto;
+}
+
+.block-info {
+  width: 100%;
+  height: 80%;
+  background: #1d204b;
+  border-radius: 10px;
+  box-shadow: 0px 4px 3px #1d204b;
+  padding: 1rem 1.5rem;
+  padding-top: 0.5rem;
+  cursor: pointer;
+
+  position: relative;
+  top: 20%;
+
+  &:hover {
+    background: #34397b;
+  }
+
+  //   1.title
+  .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    strong {
+      color: white;
+      font-weight: 500;
+      font-size: 1.2rem;
+      user-select: none;
+      z-index: 6;
+    }
+
+    span {
+      color: rgba(255, 255, 255, 0.605);
+      font-size: 2rem;
+      font-family: auto;
+      cursor: pointer;
+      z-index: 1;
+
+      &:hover {
+        color: rgb(255, 255, 255);
+      }
+
+      &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: red;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 10px;
+        display: none;
+        z-index: -1;
+      }
+
+      &:hover::before {
+        display: block;
+        background-color: #1d204b;
+      }
+    }
+  }
+
+  //  2. info-value
+  .info-value {
+    z-index: 5;
+    font-size: 3rem;
+    font-weight: 300;
+    color: white;
+  }
+
+  //  3. info-time
+  .info-time {
+    z-index: 5;
+    color: #a0a4d8;
+  }
+}
+// .work
+.work {
+  background-image: url(../images/icon-work.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top -1rem right 1rem;
+  background-color: #ff8b64;
+}
+// .play
+.play {
+  background-image: url(../images/icon-play.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top -1rem right 1rem;
+  background-color: #56c2e6;
+}
+// .study
+.study {
+  background-image: url(../images/icon-study.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top -1rem right 1rem;
+  background-color: #ff5e7d;
+}
+// .exercise
+.exercise {
+  background-image: url(../images/icon-exercise.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top -1rem right 1rem;
+  background-color: #4bcf83;
+}
+// .socal
+.social {
+  background-image: url(../images/icon-social.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top -1rem right 1rem;
+  background-color: #7235d1;
+}
+// .self care
+.selfcare {
+  background-image: url(../images/icon-self-care.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top -1rem right 1rem;
+  background-color: #f1c75b;
+}
+
+@media screen and (max-width: 1023.98px) {
+  .container {
+    grid-template-columns: 1fr;
+    max-width: 800px;
+  }
+
+  /* ========================================================================== */
+  /*                                    .INFO                                   */
+  /* ========================================================================== */
+  .info-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 90px;
+      height: 90px;
+      border-radius: 100rem;
+    }
+    .name {
+      align-items: center;
+    }
+  }
+
+  //   .info-date
+  .info-date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+  }
+
+  /* ========================================================================== */
+  /*                                    TIME                                    */
+  /* ========================================================================== */
+  .time {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  //   .block-info
+  .block-info {
+    padding: 2.5rem 1.5rem;
+    padding-top: 0.5rem;
+
+    .value {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+
+      h2 {
+        font-size: 2.2rem;
+      }
+    }
+  }
+}

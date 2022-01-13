@@ -1,0 +1,491 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Bai+Jamjuree:ital,wght@0,400;0,600;1,400;1,600&family=Barlow+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Barlow+Semi+Condensed:ital,wght@0,500;0,600;1,500;1,600&family=Barlow:ital,wght@0,400;0,600;1,400;1,600&family=Commissioner:wght@400;500;700;800&family=DM+Serif+Display:ital@0;1&family=Fraunces:ital,wght@0,700;0,900;1,700;1,900&family=Inter:wght@400;700&family=Josefin+Sans:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Karla:ital,wght@0,400;0,700;1,400;1,700&family=Libre+Franklin:ital,wght@0,300;0,600;0,700;1,300;1,600;1,700&family=Manrope:wght@600;800&family=Montserrat:ital,wght@0,700;1,700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,500;1,700&family=Outfit:wght@300;400;600&family=Overpass:ital,wght@0,300;0,600;1,300;1,600&family=Poppins:ital,wght@0,700;1,700&family=Raleway:ital,wght@0,400;0,700;1,400;1,700&family=Rubik:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Space+Mono:ital,wght@0,400;0,700;1,700&family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-family: "Rubik", sans-serif;
+}
+
+input,
+button,
+select,
+textarea {
+  font: inherit;
+}
+
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+/* remove animation for people who've turned them off */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  background: #0d1323;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3fr;
+      grid-template-columns: 1fr 3fr;
+  gap: 1.5rem;
+  margin: 50px auto;
+  padding: 0 3rem;
+  width: 100%;
+  max-width: 1280px;
+  height: auto;
+}
+
+/* ========================================================================== */
+/*                                    .INFO                                   */
+/* ========================================================================== */
+.info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #1d204b;
+}
+
+.info-name {
+  width: 100%;
+  height: 70%;
+  background: #5746ea;
+  padding: 2rem;
+  color: white;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.info-name img {
+  width: 70px;
+  height: 70px;
+  border-radius: 100rem;
+  border: 3px solid white;
+}
+
+.info-name .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.info-name .name span {
+  padding-top: 2rem;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.info-name .name strong {
+  font-size: 2.2rem;
+  font-weight: 300;
+}
+
+.info-date {
+  width: 100%;
+  padding: 2rem;
+  background: #1d204b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  position: relative;
+}
+
+.info-date label {
+  color: #7f82d6;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.info-date label:hover {
+  color: white;
+}
+
+.info-date input {
+  position: absolute;
+  visibility: hidden;
+}
+
+.info-date input:checked + label {
+  color: white;
+}
+
+/* ========================================================================== */
+/*                                    TIME                                    */
+/* ========================================================================== */
+.time {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  height: auto;
+}
+
+.time-block {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  height: auto;
+}
+
+.block-info {
+  width: 100%;
+  height: 80%;
+  background: #1d204b;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 4px 3px #1d204b;
+          box-shadow: 0px 4px 3px #1d204b;
+  padding: 1rem 1.5rem;
+  padding-top: 0.5rem;
+  cursor: pointer;
+  position: relative;
+  top: 20%;
+}
+
+.block-info:hover {
+  background: #34397b;
+}
+
+.block-info .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.block-info .title strong {
+  color: white;
+  font-weight: 500;
+  font-size: 1.2rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  z-index: 6;
+}
+
+.block-info .title span {
+  color: rgba(255, 255, 255, 0.605);
+  font-size: 2rem;
+  font-family: auto;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.block-info .title span:hover {
+  color: white;
+}
+
+.block-info .title span::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  display: none;
+  z-index: -1;
+}
+
+.block-info .title span:hover::before {
+  display: block;
+  background-color: #1d204b;
+}
+
+.block-info .info-value {
+  z-index: 5;
+  font-size: 3rem;
+  font-weight: 300;
+  color: white;
+}
+
+.block-info .info-time {
+  z-index: 5;
+  color: #a0a4d8;
+}
+
+.work {
+  background-image: url(../images/icon-work.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top -1rem right 1rem;
+  background-color: #ff8b64;
+}
+
+.play {
+  background-image: url(../images/icon-play.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top -1rem right 1rem;
+  background-color: #56c2e6;
+}
+
+.study {
+  background-image: url(../images/icon-study.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top -1rem right 1rem;
+  background-color: #ff5e7d;
+}
+
+.exercise {
+  background-image: url(../images/icon-exercise.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top -1rem right 1rem;
+  background-color: #4bcf83;
+}
+
+.social {
+  background-image: url(../images/icon-social.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top -1rem right 1rem;
+  background-color: #7235d1;
+}
+
+.selfcare {
+  background-image: url(../images/icon-self-care.svg);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: top -1rem right 1rem;
+  background-color: #f1c75b;
+}
+
+@media screen and (max-width: 1023.98px) {
+  .container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    max-width: 800px;
+  }
+  /* ========================================================================== */
+  /*                                    .INFO                                   */
+  /* ========================================================================== */
+  .info-name {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .info-name img {
+    width: 90px;
+    height: 90px;
+    border-radius: 100rem;
+  }
+  .info-name .name {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .info-date {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 2rem;
+  }
+  /* ========================================================================== */
+  /*                                    TIME                                    */
+  /* ========================================================================== */
+  .time {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .block-info {
+    padding: 2.5rem 1.5rem;
+    padding-top: 0.5rem;
+  }
+  .block-info .value {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1rem;
+  }
+  .block-info .value h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  /* ========================================================================== */
+  /*                                    .TIME                                   */
+  /* ========================================================================== */
+  .time {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .info-name .name strong {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 424.98px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+  /* ========================================================================== */
+  /*                                    .INFO                                   */
+  /* ========================================================================== */
+  .info-name {
+    gap: 1rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .info-name img {
+    width: 60px;
+    height: 60px;
+    border-radius: 100rem;
+  }
+  .info-name .name {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .info-name .name span {
+    padding-top: 0;
+  }
+  .info-name .name strong {
+    font-size: 1.6rem;
+  }
+  /* ========================================================================== */
+  /*                                    .TIME                                   */
+  /* ========================================================================== */
+  .block-info .info-value {
+    font-size: 2.4rem;
+  }
+  .block-info .info-time {
+    font-size: 0.9rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */

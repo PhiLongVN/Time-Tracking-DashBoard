@@ -1,0 +1,65 @@
+@media screen and (max-width: 767.98px) {
+  /* ========================================================================== */
+  /*                                    .TIME                                   */
+  /* ========================================================================== */
+  .time {
+    grid-template-columns: 1fr;
+  }
+
+  .info-name {
+    .name {
+      strong {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 424.98px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+  /* ========================================================================== */
+  /*                                    .INFO                                   */
+  /* ========================================================================== */
+  //  .info-name
+  .info-name {
+    gap: 1rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+
+    // img
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 100rem;
+    }
+
+    // .name
+    .name {
+      align-items: flex-start;
+
+      span {
+        padding-top: 0;
+      }
+
+      strong {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  /* ========================================================================== */
+  /*                                    .TIME                                   */
+  /* ========================================================================== */
+  .block-info {
+    .info-value {
+      font-size: 2.4rem;
+    }
+
+    .info-time {
+      font-size: 0.9rem;
+    }
+  }
+}
