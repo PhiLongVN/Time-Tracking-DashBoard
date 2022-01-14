@@ -27,7 +27,7 @@ checkTime();
 function handleClick(timer) {
   let card = [];
 
-  fetch("../data.json")
+  fetch("./script/data.json")
     .then((res) => res.json())
     .then((data) => {
       data.forEach((element) => {
