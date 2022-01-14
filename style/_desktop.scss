@@ -155,6 +155,32 @@ body {
       font-size: 1.2rem;
       user-select: none;
       z-index: 6;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: calc(100% - 55px);
+        height: 100%;
+        background: rgba(231, 13, 13, 0);
+        top: 0%;
+        left: 0;
+        border-radius: 10px;
+        z-index: -2;
+        display: block;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: calc(100% - 55px);
+        background: rgba(231, 13, 13, 0);
+        bottom: 0%;
+        left: 0;
+        border-radius: 10px;
+        z-index: -2;
+        display: block;
+      }
     }
 
     span {
@@ -162,7 +188,7 @@ body {
       font-size: 2rem;
       font-family: auto;
       cursor: pointer;
-      z-index: 1;
+      z-index: 5;
 
       &:hover {
         color: rgb(255, 255, 255);
@@ -172,34 +198,40 @@ body {
         content: "";
         width: 100%;
         height: 100%;
-        background-color: red;
+        background-color: rgba(255, 0, 0, 0);
         position: absolute;
         top: 0;
         left: 0;
         border-radius: 10px;
-        display: none;
-        z-index: -1;
+        z-index: -3;
       }
 
       &:hover::before {
-        display: block;
-        background-color: #1d204b;
+        background: #1d204b;
       }
     }
   }
 
-  //  2. info-value
-  .info-value {
-    z-index: 5;
-    font-size: 3rem;
-    font-weight: 300;
-    color: white;
-  }
+  .value {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 9;
 
-  //  3. info-time
-  .info-time {
-    z-index: 5;
-    color: #a0a4d8;
+    //  2. info-value
+    .info-value {
+      z-index: 5;
+      font-size: 3rem;
+      font-weight: 300;
+      color: white;
+    }
+
+    //  3. info-time
+    .info-time {
+      z-index: 5;
+      color: #a0a4d8;
+    }
   }
 }
 // .work
@@ -301,6 +333,7 @@ body {
       justify-content: space-between;
       align-items: center;
       gap: 1rem;
+      flex-direction: row;
 
       h2 {
         font-size: 2.2rem;

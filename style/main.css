@@ -265,12 +265,38 @@ body {
   z-index: 6;
 }
 
+.block-info .title strong::after {
+  content: "";
+  position: absolute;
+  width: calc(100% - 55px);
+  height: 100%;
+  background: rgba(231, 13, 13, 0);
+  top: 0%;
+  left: 0;
+  border-radius: 10px;
+  z-index: -2;
+  display: block;
+}
+
+.block-info .title strong::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 55px);
+  background: rgba(231, 13, 13, 0);
+  bottom: 0%;
+  left: 0;
+  border-radius: 10px;
+  z-index: -2;
+  display: block;
+}
+
 .block-info .title span {
   color: rgba(255, 255, 255, 0.605);
   font-size: 2rem;
   font-family: auto;
   cursor: pointer;
-  z-index: 1;
+  z-index: 5;
 }
 
 .block-info .title span:hover {
@@ -281,28 +307,43 @@ body {
   content: "";
   width: 100%;
   height: 100%;
-  background-color: red;
+  background-color: rgba(255, 0, 0, 0);
   position: absolute;
   top: 0;
   left: 0;
   border-radius: 10px;
-  display: none;
-  z-index: -1;
+  z-index: -3;
 }
 
 .block-info .title span:hover::before {
-  display: block;
-  background-color: #1d204b;
+  background: #1d204b;
 }
 
-.block-info .info-value {
+.block-info .value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  z-index: 9;
+}
+
+.block-info .value .info-value {
   z-index: 5;
   font-size: 3rem;
   font-weight: 300;
   color: white;
 }
 
-.block-info .info-time {
+.block-info .value .info-time {
   z-index: 5;
   color: #a0a4d8;
 }
@@ -423,6 +464,10 @@ body {
         -ms-flex-align: center;
             align-items: center;
     gap: 1rem;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .block-info .value h2 {
     font-size: 2.2rem;
